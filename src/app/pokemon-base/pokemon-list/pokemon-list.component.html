@@ -1,0 +1,24 @@
+<div #divElement>Hello World</div>
+<table *ngIf="pokemonObserver | async; else loading">
+  <thead #head>
+    <th>Name</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <app-pokemon-detail
+      #pokemonDetailRef
+      *ngFor="let pokemon of pokemonObserver | async"
+      [detail]="pokemon"
+      (remove)="handleRemove($event)">
+      <h1>---------</h1>
+    </app-pokemon-detail>
+  </tbody>
+
+</table>
+<ng-template #loading>Loading...</ng-template>
+<pre>
+  {{ pokemonObserver | async | json }}
+
+</pre>
+
+

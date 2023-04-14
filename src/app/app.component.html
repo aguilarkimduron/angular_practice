@@ -1,0 +1,31 @@
+<!-- <app-pokemon-list /> -->
+<a *ngFor="let n of nav" [routerLink]="[n.link] " routerLinkActive="active" [routerLinkActiveOptions]="{ exact: n.exact }">{{ n.name }}</a>
+<router-outlet />
+<!-- <input [(ngModel)]="favoriteAnimal" #animalName/>
+<p>{{favoriteAnimal}}</p>
+<button (click)="handleClick(animalName.value)">Submit</button> -->
+
+
+
+<!-- <input type="text" [value]="pokemonName" (input)="handleInput($event)" />
+
+<ng-container *ngIf="pokemonName.length; then yes; else no" />
+<ng-template #yes>
+  <h1>Pokemon list</h1>
+  <p>{{ pokemonName }}</p>
+</ng-template>
+<ng-template #no>
+  <h1>Empty pokemon</h1>
+</ng-template> -->
+
+
+<!-- <ng-container *ngFor="let pokemon of pokemons"> -->
+  <!-- <div [class.cool]="pokemon.isCool">{{pokemon.name}}</div> -->
+  <!-- <div [ngClass]="{'cool': pokemon.isCool}">{{pokemon.name}}</div> -->
+  <!-- <div [style.backgroundColor]="(pokemon.isCool && 'red')">{{pokemon.name}}</div> -->
+  <!-- <div [ngStyle]="{backgroundColor: (pokemon.isCool && 'orange')}">{{pokemon.name}}</div> -->
+<!-- </ng-container> -->
+<!-- <app-pokemon-template-form /> -->
+
+<!-- <input  #testTemp type="text"/>
+<button (click)="clickShit(testTemp.value)">Click shit</button> -->

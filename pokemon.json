@@ -1,0 +1,39 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "pickachu",
+      "type": 0,
+      "isCool": true,
+      "acceptTerms": false
+    },
+    {
+      "id": 2,
+      "name": "squirtle",
+      "type": 1,
+      "isCool": true,
+      "acceptTerms": true
+    },
+    {
+      "id": 3,
+      "name": "charmander",
+      "type": 2,
+      "isCool": true,
+      "acceptTerms": true
+    },
+    {
+      "id": 4,
+      "name": "bulbasor",
+      "type": 3,
+      "isCool": false,
+      "acceptTerms": true
+    },
+    {
+      "id": 5,
+      "name": "mantine",
+      "type": 4,
+      "isCool": false,
+      "acceptTerms": true
+    }
+  ]
+}

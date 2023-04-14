@@ -1,0 +1,38 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" *ngIf="pokemon">
+  <label>Name</label>
+  <input #pokemonName="ngModel"  [(ngModel)]="pokemon.name"  type="text" name="name" (ngModelChange)="toggleChange($event)" />
+  <span *ngIf="!pokemonName.pristine">Invalid!</span>
+  <br />
+  <label>
+    <input #test type="radio" name="isCool" [value]="true" [(ngModel)]="pokemon.isCool" />
+    Is Cool
+  </label>
+  <br />
+  <label>
+    <input type="radio" name="isCool" [value]="false" [(ngModel)]="pokemon.isCool" />
+    Is not Cool
+  </label>
+  <br />
+  <label>
+    <input type="checkbox" name="acceptTerms"  [(ngModel)]="pokemon.acceptTerms" />
+    Accept Terms?
+  </label>
+  <br />
+  <label>
+    Pokemon Type:
+    <select name="pokemonType" [(ngModel)]="pokemon.type">
+      <option *ngFor="let type of pokemonType" [value]="type.key" [selected]="type.key === pokemon.type">{{ type.value }}</option>
+    </select>
+
+  </label>
+  <br />
+  <input type="submit" value="Submit" />
+  <br />
+  <button type="button" (click)="back()">Go back</button>
+  <br />
+  {{ form.value | json}}
+</form>
+<div>
+  MODEL {{ pokemon | json }}
+</div>
+
